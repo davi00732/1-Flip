@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 98, 7);
+    box-sizing: border-box;
+    font-family: "Rye", serif;
+    
+}
+
+
+ 
+
+
+body {
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+ 
+ 
+   
+ 
+ 
+.container {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container:hover .flip {
+
+    transform: rotateY(180deg);
+
+}
+
+ 
+
+
+.flip {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: 0.9s;
+}
+
+.frente,
+.tras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 0px 15px #ff3636a6;
+    backface-visibility: hidden;
+    
+
+}
+
+
+.frente {
+    background-image: url(sparta.jpg) ;
+    background-size: cover;
+}
+
+
+.tras {
+    background-image: url(sparta2.jpg);
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+
+
+p {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 2%;
+    animation: card 0.3s infinite;
+}
+
+@keyframes card {
+
+    to {
+        text-shadow: #53086e 0 0 13px,
+            #ffec99 0 0 10px;
+    }
+}
